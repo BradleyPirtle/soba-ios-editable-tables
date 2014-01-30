@@ -35,7 +35,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +71,7 @@
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -91,7 +91,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -124,6 +124,26 @@
     } else if ([[segue identifier] isEqualToString:@"NewRestaurant"]) {
       [[segue destinationViewController] setDelegate:self];
     }
+}
+
+#pragma mark New Restaurant Delegate
+- (void) restaurantViewDidSaveNewRestaurant:(SCNewRestaurantViewController*)aRestaurantController
+{
+  NSLog(@"did save %@ %@", aRestaurantController.name, aRestaurantController.kind);
+  [self.navigationController popViewControllerAnimated:YES];
+  
+  SCRestaurant *newRestaurant = [SCRestaurant restaurantWithDictionary:@{
+    @"name": aRestaurantController.name,
+    @"kind": aRestaurantController.kind
+  }];
+  
+  [self insertRestaurant:newRestaurant];
+}
+
+- (void) insertRestaurant:(SCRestaurant*)aRestaurant
+{
+  [[[SCRestaurantDataSource sharedDataSource] mutableArrayValueForKey:@"restaurants"] insertObject:aRestaurant atIndex:0];
+  [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

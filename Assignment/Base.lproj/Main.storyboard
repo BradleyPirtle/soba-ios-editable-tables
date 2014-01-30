@@ -67,7 +67,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nearby Restaurants" id="Jk9-zY-KQI">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="pAz-Te-r4x">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pAz-Te-r4x">
                             <connections>
                                 <segue destination="AGR-TG-qQu" kind="push" identifier="NewRestaurant" id="Wgt-Y5-0IF"/>
                             </connections>

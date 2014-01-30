@@ -16,4 +16,6 @@
 + (id) restaurantWithDictionary:(NSDictionary*)dictionary;
 - (id) initWithDictionary:(NSDictionary*)dictionary;
 
+- (NSDictionary*) dictionaryRepresentation;
+
 @end

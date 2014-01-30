@@ -7,11 +7,55 @@
 //
 
 #import "SCAppDelegate.h"
+#import "SCRestaurantDataSource.h"
+#import "SCRestaurant.h"
 
 @implementation SCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Load data from the application bundle
+  
+    /*
+    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Restaurants" ofType:@"plist"]];
+    for (NSDictionary *dict in array) {
+      [[[SCRestaurantDataSource sharedDataSource] mutableArrayValueForKey:@"restaurants"]
+        addObject:[SCRestaurant restaurantWithDictionary:dict]];
+    }
+    */
+  
+    // Copy default data to application's documents directory
+  
+    /*
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+  
+    NSString *documentsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"restaurants_data.plist"];
+    NSString *applicationPlistPath = [[NSBundle mainBundle] pathForResource:@"Restaurants" ofType:@"plist"];
+
+    NSFileManager *fm = [[NSFileManager alloc] init];
+  
+    if ( ![fm fileExistsAtPath:documentsPlistPath] ) {
+      NSLog(@"Copying default property list data on first run");
+
+      NSError *error;
+      BOOL success = [fm copyItemAtPath:applicationPlistPath toPath:documentsPlistPath error:&error];
+      if ( !success ) {
+          NSLog(@"%@",error);
+      }
+    }
+    */
+  
+    // Load data from documents directory
+  
+    /*
+    NSArray *array = [NSArray arrayWithContentsOfFile:documentsPlistPath];
+    for (NSDictionary *dict in array) {
+      [[[SCRestaurantDataSource sharedDataSource] mutableArrayValueForKey:@"restaurants"]
+        addObject:[SCRestaurant restaurantWithDictionary:dict]];
+    }
+    */
+  
     // Override point for customization after application launch.
     return YES;
 }
@@ -26,6 +70,8 @@
 {
   // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
   // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+  
+  // [self saveApplicationData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -41,6 +87,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+  
+  // [self saveApplicationData];
 }
+
+/*
+- (void) saveApplicationData
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"restaurants_data.plist"];
+  
+    NSMutableArray *dicts = [NSMutableArray array];
+    for (SCRestaurant *restaurant in [[SCRestaurantDataSource sharedDataSource] restaurants]) {
+      [dicts addObject:[restaurant dictionaryRepresentation]];
+    }
+  
+    if (![dicts writeToFile:documentsPlistPath atomically:YES]) {
+      NSLog(@"There was a problem saving the data");
+    }
+}
+*/
 
 @end

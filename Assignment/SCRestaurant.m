@@ -24,4 +24,12 @@
   return self;
 }
 
+- (NSDictionary*) dictionaryRepresentation
+{
+  return @{
+    @"name": self.name,
+    @"kind": self.kind
+  };
+}
+
 @end
