@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E3AF80AA189AC17C00DC8001 /* SCNewRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AF80A9189AC17C00DC8001 /* SCNewRestaurantViewController.m */; };
+		E3AF80AC189AC83000DC8001 /* Restaurants.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3AF80AB189AC83000DC8001 /* Restaurants.plist */; };
 		E3C5D02E18985086005AF499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C5D02D18985086005AF499 /* Foundation.framework */; };
 		E3C5D03018985086005AF499 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C5D02F18985086005AF499 /* CoreGraphics.framework */; };
 		E3C5D03218985086005AF499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C5D03118985086005AF499 /* UIKit.framework */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		E3AF80A8189AC17C00DC8001 /* SCNewRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNewRestaurantViewController.h; sourceTree = "<group>"; };
 		E3AF80A9189AC17C00DC8001 /* SCNewRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNewRestaurantViewController.m; sourceTree = "<group>"; };
+		E3AF80AB189AC83000DC8001 /* Restaurants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurants.plist; sourceTree = "<group>"; };
 		E3C5D02A18985086005AF499 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C5D02D18985086005AF499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3C5D02F18985086005AF499 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +179,7 @@
 				E3C5D08918985B35005AF499 /* SCRestaurantCell.h */,
 				E3C5D08A18985B35005AF499 /* SCRestaurantCell.m */,
 				E3C5D03F18985086005AF499 /* Main.storyboard */,
+				E3AF80AB189AC83000DC8001 /* Restaurants.plist */,
 				E3AF80A7189ABDFE00DC8001 /* datasource */,
 				E3C5D08E18985D40005AF499 /* Images */,
 				E3C5D04818985086005AF499 /* Images.xcassets */,
@@ -317,6 +320,7 @@
 				E3C5D07118985455005AF499 /* tags.png in Resources */,
 				E3C5D04918985086005AF499 /* Images.xcassets in Resources */,
 				E3C5D06E1898539D005AF499 /* star@2x.png in Resources */,
+				E3AF80AC189AC83000DC8001 /* Restaurants.plist in Resources */,
 				E3C5D07918985548005AF499 /* food.png in Resources */,
 				E3C5D076189854AE005AF499 /* persondot@2x.png in Resources */,
 				E3C5D075189854AE005AF499 /* persondot.png in Resources */,

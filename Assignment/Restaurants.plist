@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Srirachi High</string>
+		<key>kind</key>
+		<string>Thai</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jim&apos;s Barbeque</string>
+		<key>kind</key>
+		<string>American</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>On the Border</string>
+		<key>kind</key>
+		<string>TexMex</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Outback Steakhouse</string>
+		<key>kind</key>
+		<string>American</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gopuram</string>
+		<key>kind</key>
+		<string>Indian</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>The Fishnet</string>
+		<key>kind</key>
+		<string>Sushi</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Himalayas</string>
+		<key>kind</key>
+		<string>Indian</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bloody Delicious</string>
+		<key>kind</key>
+		<string>British</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Food for Thought</string>
+		<key>kind</key>
+		<string>Vegetarian</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Everything Cheese</string>
+		<key>kind</key>
+		<string>American</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fried Fiesta</string>
+		<key>kind</key>
+		<string>TexMex</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Subway</string>
+		<key>kind</key>
+		<string>Deli</string>
+	</dict>
+</array>
+</plist>
