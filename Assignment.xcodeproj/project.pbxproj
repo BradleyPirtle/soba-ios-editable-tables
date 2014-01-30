@@ -56,6 +56,7 @@
 		E3AF80A8189AC17C00DC8001 /* SCNewRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNewRestaurantViewController.h; sourceTree = "<group>"; };
 		E3AF80A9189AC17C00DC8001 /* SCNewRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNewRestaurantViewController.m; sourceTree = "<group>"; };
 		E3AF80AB189AC83000DC8001 /* Restaurants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurants.plist; sourceTree = "<group>"; };
+		E3AF80BD189AD69700DC8001 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E3C5D02A18985086005AF499 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C5D02D18985086005AF499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3C5D02F18985086005AF499 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +157,7 @@
 		E3C5D02C18985086005AF499 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3AF80BD189AD69700DC8001 /* libsqlite3.dylib */,
 				E3C5D07E18985665005AF499 /* MapKit.framework */,
 				E3C5D02D18985086005AF499 /* Foundation.framework */,
 				E3C5D02F18985086005AF499 /* CoreGraphics.framework */,

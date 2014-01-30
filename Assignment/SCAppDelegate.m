@@ -10,6 +10,8 @@
 #import "SCRestaurantDataSource.h"
 #import "SCRestaurant.h"
 
+//#import "FMDatabase.h"
+
 @implementation SCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -56,8 +58,59 @@
     }
     */
   
+    // ensure data is available in sql database, if not then create and populate
+  
+    /*
+    NSString *documentsDatabasePath = [self documentsDatabasePath];
+    NSFileManager *fm = [[NSFileManager alloc] init];
+
+    if ( ![fm fileExistsAtPath:documentsDatabasePath] ) {
+        NSLog(@"Creating default database on first run");
+      
+        FMDatabase *database = [FMDatabase databaseWithPath:documentsDatabasePath];
+        if ( ![database open] ) {
+          NSLog(@"There was a problem creating the default database");
+        } else {
+          NSString *create = @"CREATE TABLE restaurants( "
+                  "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                  "name TEXT, "
+                  "kind TEXT)";
+
+          BOOL success = [database executeUpdate:create];
+          if ( !success ) {
+              NSLog(@"There was a problem executing the create query");
+          } else {
+          
+            // populate the database with the original application bundle data
+            
+            NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Restaurants" ofType:@"plist"]];
+            for (NSDictionary *dict in array) {
+              NSString *insert = @"INSERT INTO restaurants (name, kind) VALUES (:name, :kind)";
+              BOOL success = [database executeUpdate:insert withParameterDictionary:dict];
+              if ( !success ) {
+                  NSLog(@"There was a problem adding default data to the destinations table: %@", dict);
+              }
+            }
+          }
+
+          [database close];
+        }
+    }
+    */
+  
     // Override point for customization after application launch.
     return YES;
+}
+
+- (NSString*)documentsDatabasePath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    // set up a view filepaths
+    NSString *documentsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"restaurants_data.sqlite"];
+    
+    return documentsPlistPath;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -91,6 +144,8 @@
   // [self saveApplicationData];
 }
 
+#pragma mark -
+
 /*
 - (void) saveApplicationData
 {
@@ -108,5 +163,7 @@
     }
 }
 */
+
+
 
 @end
