@@ -30,6 +30,8 @@ We need to fix these issues. This is your homework assignment. Building off this
 
 8 Be careful when you insert a new restaurant! All the index values will change, and you'll need to update all the objects in the database. That will require a different sql statement.
 
+9 And be careful as you make changes to your data or database. You'll need to clear your application's sandbox when you change the model or want to reset your data. To do that, you need to delete the application from the simulator.
+
 ##### Don't put it off!
 
 This is a tough assignment. You'll need to be adept at Objective-C but will also have to use, and maybe learn, some SQL. You also need to understand the FMDB API. But most importantly, you will need to think carefully about how to best design your code to implement the above functionality. What methods do you need? What should they do? And where do they go?
